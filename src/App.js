@@ -1,14 +1,21 @@
-// App.js
 import React from 'react';
-import FileUpload from './FileUpload';
-
+import MusicPlayer from './MusicPlayer'; 
 
 const App = () => {
+  
+  const handleFileUpload = (newSong) => {
+    
+    console.log('New song uploaded:', newSong);
+  };
+
+  const handleNext = () => {
+   
+    console.log('Next song requested');
+  };
 
   return (
     <div>
-      <FileUpload  />
-     
+      <MusicPlayer onFileUpload={handleFileUpload} onNext={handleNext} />
     </div>
   );
 };
